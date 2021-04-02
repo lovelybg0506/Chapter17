@@ -8,7 +8,7 @@ import model.vo.Coffee;
 
 public class CoffeeManager {
 	private Coffee[] orderArr;
-	private ArrayList<Coffee> orderList; // 주문리스트
+	private ArrayList<Coffee> orderList; // 주문리스트 // ArrayList=> 인덱스신경쓰기, 중간배열을 지우면 덮어쓴것이지만 ArrayList는 삭제하면 옆에있는인덱스가 끌어당겨짐
 	private CoffeeDao coDao;
 	private int count;
 
@@ -46,7 +46,7 @@ public class CoffeeManager {
 
 		if (idx != orderList.size()) {
 			for (int i = idx; i < orderList.size(); i++) {
-				orderList.get(i).setOrderNo(i + 1);
+				orderList.get(i).setOrderNo(i+1); //지운걸 i 로 가져온다?...hmmm,,, actually,, i don't know why coded that...
 			}
 		}
 	}
