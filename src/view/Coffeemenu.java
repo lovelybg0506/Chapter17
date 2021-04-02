@@ -3,6 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.CoffeeManager;
+import model.vo.Coffee;
 
 public class Coffeemenu {
 	public static CoffeeManager cm = new CoffeeManager();
@@ -73,7 +74,7 @@ public class Coffeemenu {
 		int cups = sc.nextInt();
 		
 		System.out.println("주문 정보 확인 : ");
-//		System.out.println(cm.insertCoffee(new Coffee(sel,cups));
+		System.out.println(cm.insertCoffee(new Coffee(sel,cups)));
 		
 		
 	}
