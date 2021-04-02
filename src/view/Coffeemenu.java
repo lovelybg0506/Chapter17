@@ -58,14 +58,24 @@ public class Coffeemenu {
 
 	public static void insertCoffee() {
 //		어떤커피선택?
+		Scanner sc = new Scanner(System.in);
+		System.out.println("------메뉴------");
 		System.out.println("주문하실 커피를 선택하세요.");
 		System.out.println("1.아메리카노");
 		System.out.println("2.카페라떼");
 		System.out.println("3.카푸치노");
+		System.out.println("------메뉴------");
+
+		System.out.print("메뉴 선택 : ");
+		int sel = sc.nextInt();
 		
-//		do {
-//			
-//		}while()
+		System.out.println("몇 잔 주문하시겠습니까? : ");
+		int cups = sc.nextInt();
+		
+		System.out.println("주문 정보 확인 : ");
+//		System.out.println(cm.insertCoffee(new Coffee(sel,cups));
+		
+		
 	}
 
 	public static void selectCoffeeOne() {
