@@ -90,7 +90,7 @@ public class Coffeemenu {
 		int orderNo = sc.nextInt();
 		try {
 			System.out.println("현재 주문 내역 : ");
-			System.out.println(cm.verifyCoffee(orderNo-1)); // orderNo => orderNo-1로 수정.
+			System.out.println(cm.verifyCoffee(orderNo-1)); // orderNo => orderNo-1로 수정
 		} catch (CoffeeException e) {
 			System.out.println(e.getMessage());
 		}
