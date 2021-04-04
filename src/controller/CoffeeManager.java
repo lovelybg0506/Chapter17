@@ -38,7 +38,7 @@ public class CoffeeManager {
 
 	public void updateCoffee(int orderNo, Coffee coffee) {
 		coffee.setOrderNo(orderNo);
-		orderList.set(orderNo, coffee);
+		orderList.set(orderNo-1, coffee); // orderNo =>  orderNo-1로 수정.
 	}
 
 	public void deleteCoffee(int idx) {
@@ -46,7 +46,7 @@ public class CoffeeManager {
 
 		if (idx != orderList.size()) {
 			for (int i = idx; i < orderList.size(); i++) {
-				orderList.get(i).setOrderNo(i+1); //지운걸 i 로 가져온다?...hmmm,,, actually,, i don't know why coded that...
+				orderList.get(i).setOrderNo(i+1); //지운걸 i 로 가져온다?...hm
 			}
 		}
 	}
