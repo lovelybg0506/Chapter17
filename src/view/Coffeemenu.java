@@ -90,7 +90,7 @@ public class Coffeemenu {
 		int orderNo = sc.nextInt();
 		try {
 			System.out.println("현재 주문 내역 : ");
-			System.out.println(cm.verifyCoffee(orderNo-1)); // orderNo => orderNo-1로 수정
+			System.out.println(cm.verifyCoffee(orderNo));
 		} catch (CoffeeException e) {
 			System.out.println(e.getMessage());
 		}
@@ -103,9 +103,9 @@ public class Coffeemenu {
 
 		try {
 			System.out.println("주문 내역 확인");
-			System.out.println(cm.verifyCoffee(orderNo-1));// 기존 주문 내역을 보여준다. // orderNo =>  orderNo-1로 수정.
+			System.out.println(cm.verifyCoffee(orderNo));// 기존 주문 내역을 보여준다. 
 			System.out.println("------메뉴------");
-			System.out.println("주문하실 커피를 선택하세요.");
+			System.out.println("교체하실 커피를 선택하세요.");
 			System.out.println("1.아메리카노");
 			System.out.println("2.카페라떼");
 			System.out.println("3.카푸치노");
@@ -130,7 +130,7 @@ public class Coffeemenu {
 		
 		try {
 			System.out.println("주문 내역 확인");
-			System.out.println(cm.verifyCoffee(orderNo-1));
+			System.out.println(cm.verifyCoffee(orderNo));
 			System.out.println("정말 취소 하시겠습니까?(Y/N)");
 			if(sc.next().toUpperCase().charAt(0) == 'Y') {	// toUpperCase() 하는이유 : 소문자로 입력받아도 대문자로 자동교체하려고
 				cm.deleteCoffee(orderNo-1);// 실질적으로 취소하는 코드 // orderNo =>  orderNo-1로 수정.

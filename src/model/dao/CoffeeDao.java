@@ -13,10 +13,10 @@ public class CoffeeDao implements CoffeeDaoInterface{
 
 	public ArrayList<Coffee> openList() {
 
-		ArrayList<Coffee> list = new ArrayList<Coffee>();
+		ArrayList<Coffee> list = new ArrayList<Coffee>(); /*1 내가 입력한값을 */
 
 		try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("coffee.dat"))) {
-			while (in.available() != -1) {
+			while (in.available() != -1) {   			/*1 처리하는 과정들  */
 				list.add((Coffee) in.readObject());
 			}
 		} catch (EOFException e) {
@@ -34,10 +34,10 @@ public class CoffeeDao implements CoffeeDaoInterface{
 		int result = -1; // 선택지( -1을 리턴 )
 
 		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("coffee.dat"))) {
-			for (Coffee co : list) {
-				out.writeObject(co);
+			for (Coffee co : list) {			/*2 내가 출력한 값을 */
+				out.writeObject(co);	
 			}
-			result = 1; // 선택지 ( 1을 리턴 )
+			result = 1; // 선택지 ( 1을 리턴 )		/*2 처리하는 과정 */
 
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
